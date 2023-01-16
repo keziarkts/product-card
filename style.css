@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap'); /*Montserrat 500 & 700*/
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: hsl(30, 38%, 92%);
+}
+
+.row {
+    display: flex;
+    overflow: hidden;
+}
+
+.column {
+    flex: 1;    
+}
+
+.main-card {
+    background: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 100px;
+    width: 620px;
+    height: 470px;
+    
+}
+
+.img-container {
+    background-image: url(images/image-product-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-details {
+    margin: 35px;
+}
+
+.card-details h1 {
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 700;
+    color: hsl(212, 21%, 14%);
+}
+
+.card-details p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+    font-weight: 500;
+}
+
+.card-details .product-category {
+    letter-spacing: 3px;
+}
+
+.price-part {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.price-part .actual-product-price {
+    color:hsl(158, 36%, 37%);
+}
+
+.price-part .old-product-price {
+    text-decoration-line: line-through;
+}
+
+button {
+    background-color: hsl(158, 36%, 37%);
+    cursor: pointer;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    width: 100%;
+    color:hsl(0, 0%, 100%);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+button:hover {
+    background-color: hsl(161, 33%, 20%);
+}
+
+
+/***** 
+****** for mobile   ******
+                    ******/
+@media (max-width: 375px) {
+
+    .row {
+        display: block;
+        width: 100%;
+    }
+    .main-card {
+        margin: 70px 20px;
+        height: 670px;
+        width: auto;
+    }  
+    .img-container {
+        background-image: url(images/image-product-mobile.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 40%;
+    }
+    .card-details {
+        margin: 22px;
+    }
+    .card-details .product-category {
+        margin-bottom: -12px;
+    }
+    .card-details .product-title {
+        line-height: 2rem;
+    }
+    .card-details .product-description {
+        line-height: 1.5rem;
+    }
+    
+}
